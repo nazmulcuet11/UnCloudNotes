@@ -60,6 +60,15 @@ class AttachPhotoViewController: UIViewController {
 
 // MARK: - UIImagePickerControllerDelegate
 extension AttachPhotoViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        if  let note = note,
+            let image = info[.originalImage] as? UIImage {
+            note.image = image
+        }
+
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: - UINavigationControllerDelegate
