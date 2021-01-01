@@ -11,7 +11,6 @@ import UIKit
 import CoreData
 
 class Attachment: NSManagedObject {
-    @NSManaged var image: UIImage?
     @NSManaged var dateCreated: Date
     @NSManaged var note: Note?
     

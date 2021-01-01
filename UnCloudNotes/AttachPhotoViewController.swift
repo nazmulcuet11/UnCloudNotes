@@ -69,7 +69,8 @@ extension AttachPhotoViewController: UIImagePickerControllerDelegate {
             return
         }
 
-        let attachment = Attachment(context: context)
+        let attachment = ImageAttachment(context: context)
+        attachment.caption = "New Photo"
         attachment.image = info[.originalImage] as? UIImage
         attachment.dateCreated = Date()
         attachment.note = note
