@@ -13,6 +13,7 @@ import UIKit
 let errorDomain = "Migration"
 
 class AttachmentToImageAttachmentMigrationPolicyV3toV4: NSEntityMigrationPolicy {
+
     override func createDestinationInstances(
         forSource sInstance: NSManagedObject,
         in mapping: NSEntityMapping,
@@ -26,7 +27,7 @@ class AttachmentToImageAttachmentMigrationPolicyV3toV4: NSEntityMigrationPolicy 
             forEntityName: "ImageAttachment",
             in: manager.destinationContext
         )
-        let newAttachment = ImageAttachment(
+        let dInstance = ImageAttachment(
             entity: description!,
             insertInto: manager.destinationContext
         )
@@ -44,23 +45,25 @@ class AttachmentToImageAttachmentMigrationPolicyV3toV4: NSEntityMigrationPolicy 
                     return
                 }
 
-                newAttachment.setValue(destinationValue, forKey: destinationName)
+                dInstance.setValue(destinationValue, forKey: destinationName)
             }
         }
 
         // 3 apply custom mappings
         if let image = sInstance.value(forKey: "image") as? UIImage {
-            newAttachment.setValue(image.size.width, forKey: "width")
-            newAttachment.setValue(image.size.height, forKey: "height")
+            dInstance.setValue(image.size.width, forKey: "width")
+            dInstance.setValue(image.size.height, forKey: "height")
         }
         let body = (sInstance.value(forKeyPath: "note.body") as? NSString) ?? ""
-        newAttachment.setValue(body.substring(to: 80), forKey: "caption")
+        dInstance.setValue(body.substring(to: 80), forKey: "caption")
 
         // 4 pass the destination object to the migration manager
         manager.associate(sourceInstance: sInstance,
-                          withDestinationInstance: newAttachment,
+                          withDestinationInstance: dInstance,
                           for: mapping)
     }
+
+    // MARK: - Helper
 
     private func traversePropertyMappings(
         entityMapping: NSEntityMapping,
