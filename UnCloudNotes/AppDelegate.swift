@@ -31,27 +31,26 @@
 /// THE SOFTWARE.
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
-    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        if let splitController = window?.rootViewController as? UISplitViewController {
-            splitController.delegate = self
-        }
-        return true
-    }
-}
+    lazy var stack = CoreDataManager()
 
-// MARK: - UISplitViewControllerDelegate
-extension AppDelegate: UISplitViewControllerDelegate {
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        guard let secondaryAsNoteDetail = secondaryViewController as? NoteDetailViewController else {
-            return false
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let notesListVC = storyboard.instantiateViewController(withIdentifier: "\(NotesListViewController.self)") as! NotesListViewController
+
+        stack.setup {
+            notesListVC.stack = self.stack
+            
+            let navController = UINavigationController(rootViewController: notesListVC)
+            self.window?.rootViewController = navController
         }
-        
-        // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-        return secondaryAsNoteDetail.note == nil
+
+        return true
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nzh-cS-c40">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iry-bZ-GIz">
-                                <rect key="frame" x="21" y="96" width="374" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iry-bZ-GIz">
+                                <rect key="frame" x="21" y="52" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2U9-VX-RMc"/>
                                 </constraints>
@@ -27,26 +27,37 @@
                                 <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-c8-acD">
-                                <rect key="frame" x="20" y="125" width="374" height="729"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Body" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-c8-acD">
+                                <rect key="frame" x="20" y="81" width="374" height="561"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-uX-8zS">
+                                <rect key="frame" x="107" y="652" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hor-by-Md3"/>
+                                    <constraint firstAttribute="height" constant="200" id="xqV-iQ-rEP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pIq-c8-acD" firstAttribute="top" secondItem="iry-bZ-GIz" secondAttribute="bottom" constant="8" symbolic="YES" id="7Hb-yz-KIT"/>
-                            <constraint firstItem="iry-bZ-GIz" firstAttribute="top" secondItem="ubA-ny-CNa" secondAttribute="bottom" constant="20" symbolic="YES" id="DjE-qG-UBa"/>
+                            <constraint firstItem="hxU-uX-8zS" firstAttribute="centerX" secondItem="EqO-Jc-Zcj" secondAttribute="centerX" id="CrK-cU-NTX"/>
+                            <constraint firstItem="iry-bZ-GIz" firstAttribute="top" secondItem="ubA-ny-CNa" secondAttribute="bottom" constant="8" symbolic="YES" id="DjE-qG-UBa"/>
+                            <constraint firstItem="Avo-Jn-jl0" firstAttribute="top" secondItem="hxU-uX-8zS" secondAttribute="bottom" constant="10" id="HEd-QB-2hr"/>
                             <constraint firstAttribute="trailing" secondItem="iry-bZ-GIz" secondAttribute="trailing" constant="19" id="Hlm-gx-go0"/>
+                            <constraint firstItem="hxU-uX-8zS" firstAttribute="top" secondItem="pIq-c8-acD" secondAttribute="bottom" constant="10" id="Mqu-Zr-6dp"/>
                             <constraint firstItem="pIq-c8-acD" firstAttribute="leading" secondItem="EqO-Jc-Zcj" secondAttribute="leading" constant="20" symbolic="YES" id="Z7s-RX-T2f"/>
-                            <constraint firstItem="Avo-Jn-jl0" firstAttribute="top" secondItem="pIq-c8-acD" secondAttribute="bottom" constant="8" id="a3n-kc-xNB"/>
                             <constraint firstItem="iry-bZ-GIz" firstAttribute="leading" secondItem="EqO-Jc-Zcj" secondAttribute="leading" constant="21" id="dfs-IJ-d39"/>
                             <constraint firstAttribute="trailing" secondItem="pIq-c8-acD" secondAttribute="trailing" constant="20" symbolic="YES" id="wyX-Tw-HqD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Q4x-FL-HIw"/>
                     <connections>
                         <outlet property="bodyField" destination="pIq-c8-acD" id="G46-Ao-G5Q"/>
+                        <outlet property="imageView" destination="hxU-uX-8zS" id="cYo-BD-wC2"/>
                         <outlet property="titleField" destination="iry-bZ-GIz" id="JMo-nR-pcw"/>
                     </connections>
                 </viewController>
@@ -57,7 +68,7 @@
         <!--Notes-->
         <scene sceneID="bHJ-0Z-c3y">
             <objects>
-                <tableViewController title="Notes" clearsSelectionOnViewWillAppear="NO" id="EKu-mK-XMh" customClass="NotesListViewController" customModule="UnCloudNotes" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NotesListViewController" title="Notes" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="EKu-mK-XMh" customClass="NotesListViewController" customModule="UnCloudNotes" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="HOD-uq-a8x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +110,7 @@
                                 <connections>
                                     <outlet property="noteCreateDate" destination="lzw-ye-OfH" id="vzf-Ew-yyx"/>
                                     <outlet property="noteTitle" destination="XLV-Jz-XBv" id="C7w-TX-vak"/>
-                                    <segue destination="t4y-WJ-gN4" kind="showDetail" identifier="showNoteDetail" id="GCZ-pB-Bnh"/>
+                                    <segue destination="t4y-WJ-gN4" kind="show" identifier="showNoteDetail" id="GCZ-pB-Bnh"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCellWithImage" rowHeight="80" id="o7t-1p-Lxg" customClass="NoteImageTableViewCell" customModule="UnCloudNotes" customModuleProvider="target">
@@ -148,7 +159,7 @@
                                     <outlet property="noteCreateDate" destination="qF3-It-NzW" id="OjG-jb-MvW"/>
                                     <outlet property="noteImage" destination="moU-sc-IAN" id="9sk-ct-V0B"/>
                                     <outlet property="noteTitle" destination="28X-6R-oxK" id="GCV-dn-acV"/>
-                                    <segue destination="t4y-WJ-gN4" kind="showDetail" id="wOt-FP-WAl"/>
+                                    <segue destination="t4y-WJ-gN4" kind="show" id="wOt-FP-WAl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -232,35 +243,6 @@
                 <exit id="X8J-V9-9Gr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3524" y="259"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1hz-5Q-Gj2">
-            <objects>
-                <navigationController id="EvJ-gQ-OUD" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hiw-0k-z7k">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="EKu-mK-XMh" kind="relationship" relationship="rootViewController" id="qEQ-xz-CMi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6LL-Sw-JiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="863" y="259"/>
-        </scene>
-        <!--Notes-->
-        <scene sceneID="dCr-Tf-c6D">
-            <objects>
-                <splitViewController title="Notes" id="nzh-cS-c40" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="EvJ-gQ-OUD" kind="relationship" relationship="masterViewController" id="lb5-OH-0od"/>
-                        <segue destination="t4y-WJ-gN4" kind="relationship" relationship="detailViewController" id="Puh-5n-idn"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="268-s4-j2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="119" y="1043"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M1b-MC-rkv">
@@ -385,7 +367,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GCZ-pB-Bnh"/>
+        <segue reference="wOt-FP-WAl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="darkTextColor">

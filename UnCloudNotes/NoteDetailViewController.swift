@@ -47,7 +47,8 @@ class NoteDetailViewController: UIViewController, NoteDisplayable {
     // MARK: - IBOutlets
     @IBOutlet private var titleField: UILabel!
     @IBOutlet private var bodyField: UITextView!
-    
+    @IBOutlet weak var imageView: UIImageView!
+
     // MARK: - View Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -65,5 +66,6 @@ extension NoteDetailViewController {
         
         titleField.text = note.title
         bodyField.text = note.body
+        imageView.image = note.image
     }
 }

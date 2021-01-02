@@ -34,11 +34,11 @@ import UIKit
 import CoreData
 
 class NotesListViewController: UITableViewController {
-    // MARK: - Properties
-    private lazy var stack = CoreDataStack(modelName: "UnCloudNotesDataModel")
+
+    var stack: CoreDataManager!
     
     private lazy var notes: NSFetchedResultsController<Note> = {
-        let context = self.stack.managedContext
+        let context = self.stack.mainContext
         let request: NSFetchRequest<Note> = Note.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: #keyPath(Note.dateCreated), ascending: false)]
         
@@ -68,7 +68,7 @@ class NotesListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navController = segue.destination as? UINavigationController,
            let viewController = navController.topViewController as? UsesCoreDataObjects {
-            viewController.managedObjectContext = stack.savingContext
+            viewController.managedObjectContext = stack.backgroundContext
         }
         
         if let detailView = segue.destination as? NoteDisplayable,
@@ -111,10 +111,6 @@ extension NotesListViewController {
         }
         cell.note = note
         return cell
-
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
-//        cell.note = notes.object(at: indexPath)
-//        return cell
     }
 }
 

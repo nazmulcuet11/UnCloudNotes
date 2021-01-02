@@ -10,14 +10,21 @@
 		22AFD4B61B5527B9002CE770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AFD4B41B5527B9002CE770 /* LaunchScreen.storyboard */; };
 		279570D719827BC400F52BA9 /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279570D619827BC400F52BA9 /* ImageTransformer.swift */; };
 		790FC6E4198439AD00B52A53 /* AttachPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790FC6E3198439AD00B52A53 /* AttachPhotoViewController.swift */; };
+		7C1BBE5125A07B6D007D4628 /* CoreDataMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE5025A07B6D007D4628 /* CoreDataMigrator.swift */; };
+		7C1BBE5525A0CF0C007D4628 /* NSManagedObjectModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE5425A0CF0C007D4628 /* NSManagedObjectModel+Extension.swift */; };
+		7C1BBE5925A0CF76007D4628 /* NSPersistentStoreCoordinator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE5825A0CF76007D4628 /* NSPersistentStoreCoordinator+Extension.swift */; };
+		7C1BBE5D25A0D019007D4628 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE5C25A0D019007D4628 /* CoreDataManager.swift */; };
+		7C1BBE6525A0D9CB007D4628 /* UsesCoreDataObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE6425A0D9CB007D4628 /* UsesCoreDataObjects.swift */; };
+		7C1BBE7325A0E410007D4628 /* CoreDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1BBE7225A0E410007D4628 /* CoreDataConfiguration.swift */; };
 		7C369212259E3B650087379A /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C369211259E3B650087379A /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */; };
 		7C36921E259E45CF0087379A /* ImageAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36921D259E45CF0087379A /* ImageAttachment.swift */; };
 		7C369222259E46CA0087379A /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C369221259E46CA0087379A /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel */; };
 		7C369225259E485D0087379A /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C369224259E485D0087379A /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift */; };
+		7C7082E325A0636000FEA188 /* CoreDataSchemaVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7082E225A0636000FEA188 /* CoreDataSchemaVersion.swift */; };
+		7C7082E725A0648100FEA188 /* CoreDataMigrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7082E625A0648100FEA188 /* CoreDataMigrationStep.swift */; };
 		7C8858B6259E333100DA273E /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8858B5259E333100DA273E /* Attachment.swift */; };
 		95863A171D6DE01200247AE2 /* NoteImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95863A161D6DE01200247AE2 /* NoteImageTableViewCell.swift */; };
 		C71A68741948D2CB003A62E7 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A68731948D2CB003A62E7 /* CreateNoteViewController.swift */; };
-		C73DC122195148B500DFADAB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73DC121195148B500DFADAB /* CoreDataStack.swift */; };
 		C77E1E7D1947D6D700762492 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E1E7C1947D6D700762492 /* AppDelegate.swift */; };
 		C77E1E7F1947D6D700762492 /* NotesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E1E7E1947D6D700762492 /* NotesListViewController.swift */; };
 		C77E1E821947D6D700762492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77E1E801947D6D700762492 /* Main.storyboard */; };
@@ -33,18 +40,24 @@
 		22AFD4B51B5527B9002CE770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		279570D619827BC400F52BA9 /* ImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
 		790FC6E3198439AD00B52A53 /* AttachPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachPhotoViewController.swift; sourceTree = "<group>"; };
+		7C1BBE5025A07B6D007D4628 /* CoreDataMigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMigrator.swift; sourceTree = "<group>"; };
+		7C1BBE5425A0CF0C007D4628 /* NSManagedObjectModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectModel+Extension.swift"; sourceTree = "<group>"; };
+		7C1BBE5825A0CF76007D4628 /* NSPersistentStoreCoordinator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPersistentStoreCoordinator+Extension.swift"; sourceTree = "<group>"; };
+		7C1BBE5C25A0D019007D4628 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7C1BBE6425A0D9CB007D4628 /* UsesCoreDataObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesCoreDataObjects.swift; sourceTree = "<group>"; };
+		7C1BBE7225A0E410007D4628 /* CoreDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataConfiguration.swift; sourceTree = "<group>"; };
 		7C369211259E3B650087379A /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel; sourceTree = "<group>"; };
 		7C36921C259E44A30087379A /* UnCloudNotesDataModel_v4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UnCloudNotesDataModel_v4.xcdatamodel; sourceTree = "<group>"; };
 		7C36921D259E45CF0087379A /* ImageAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAttachment.swift; sourceTree = "<group>"; };
 		7C369221259E46CA0087379A /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel; sourceTree = "<group>"; };
 		7C369224259E485D0087379A /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentToImageAttachmentMigrationPolicyV3toV4.swift; sourceTree = "<group>"; };
+		7C7082E225A0636000FEA188 /* CoreDataSchemaVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSchemaVersion.swift; sourceTree = "<group>"; };
+		7C7082E625A0648100FEA188 /* CoreDataMigrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMigrationStep.swift; sourceTree = "<group>"; };
 		7C8858B4259E305300DA273E /* UnCloudNotesDataModel_v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UnCloudNotesDataModel_v3.xcdatamodel; sourceTree = "<group>"; };
 		7C8858B5259E333100DA273E /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		95863A161D6DE01200247AE2 /* NoteImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteImageTableViewCell.swift; sourceTree = "<group>"; };
 		9A7C171C259CA86300C76165 /* UnCloudNotesDataModel_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UnCloudNotesDataModel_v2.xcdatamodel; sourceTree = "<group>"; };
 		C71A68731948D2CB003A62E7 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CreateNoteViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		C73DC121195148B500DFADAB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = CoreDataStack.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		C75D48831950CF7900648D63 /* NotesListViewController+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NotesListViewController+Additions.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C77E1E771947D6D700762492 /* UnCloudNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnCloudNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C77E1E7B1947D6D700762492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C77E1E7C1947D6D700762492 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +113,13 @@
 			children = (
 				9A7C1721259CAC1100C76165 /* Schema */,
 				7C369214259E3B6E0087379A /* Migration */,
-				C73DC121195148B500DFADAB /* CoreDataStack.swift */,
+				7C1BBE7225A0E410007D4628 /* CoreDataConfiguration.swift */,
+				7C1BBE5425A0CF0C007D4628 /* NSManagedObjectModel+Extension.swift */,
+				7C1BBE5825A0CF76007D4628 /* NSPersistentStoreCoordinator+Extension.swift */,
+				7C7082E225A0636000FEA188 /* CoreDataSchemaVersion.swift */,
+				7C7082E625A0648100FEA188 /* CoreDataMigrationStep.swift */,
+				7C1BBE5025A07B6D007D4628 /* CoreDataMigrator.swift */,
+				7C1BBE5C25A0D019007D4628 /* CoreDataManager.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -148,8 +167,8 @@
 				C7D603331D353F1F0080A77D /* UnCloudNotes.entitlements */,
 				C7D603311D353F150080A77D /* Images.xcassets */,
 				C77E1E7C1947D6D700762492 /* AppDelegate.swift */,
+				7C1BBE6425A0D9CB007D4628 /* UsesCoreDataObjects.swift */,
 				C77E1E7E1947D6D700762492 /* NotesListViewController.swift */,
-				C75D48831950CF7900648D63 /* NotesListViewController+Additions.h */,
 				C7F78B8E194E1D5A00BAF550 /* NoteDetailViewController.swift */,
 				C71A68731948D2CB003A62E7 /* CreateNoteViewController.swift */,
 				C7F78B90194E1F1300BAF550 /* NoteTableViewCell.swift */,
@@ -278,16 +297,23 @@
 				C7F78B8F194E1D5A00BAF550 /* NoteDetailViewController.swift in Sources */,
 				7C369222259E46CA0087379A /* UnCloudNotesMappingModel_v3_to_v4.xcmappingmodel in Sources */,
 				7C8858B6259E333100DA273E /* Attachment.swift in Sources */,
+				7C1BBE5D25A0D019007D4628 /* CoreDataManager.swift in Sources */,
 				279570D719827BC400F52BA9 /* ImageTransformer.swift in Sources */,
 				790FC6E4198439AD00B52A53 /* AttachPhotoViewController.swift in Sources */,
+				7C1BBE5125A07B6D007D4628 /* CoreDataMigrator.swift in Sources */,
+				7C1BBE5525A0CF0C007D4628 /* NSManagedObjectModel+Extension.swift in Sources */,
+				7C1BBE6525A0D9CB007D4628 /* UsesCoreDataObjects.swift in Sources */,
 				C7BBD86D194FFCDF00BDDB95 /* Note.swift in Sources */,
 				7C369225259E485D0087379A /* AttachmentToImageAttachmentMigrationPolicyV3toV4.swift in Sources */,
 				C71A68741948D2CB003A62E7 /* CreateNoteViewController.swift in Sources */,
+				7C1BBE7325A0E410007D4628 /* CoreDataConfiguration.swift in Sources */,
 				7C369212259E3B650087379A /* UnCloudNotesMappingModel_v2_to_v3.xcmappingmodel in Sources */,
+				7C1BBE5925A0CF76007D4628 /* NSPersistentStoreCoordinator+Extension.swift in Sources */,
 				C7F78B91194E1F1300BAF550 /* NoteTableViewCell.swift in Sources */,
 				C77E1E7D1947D6D700762492 /* AppDelegate.swift in Sources */,
 				7C36921E259E45CF0087379A /* ImageAttachment.swift in Sources */,
-				C73DC122195148B500DFADAB /* CoreDataStack.swift in Sources */,
+				7C7082E725A0648100FEA188 /* CoreDataMigrationStep.swift in Sources */,
+				7C7082E325A0636000FEA188 /* CoreDataSchemaVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
